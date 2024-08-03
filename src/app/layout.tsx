@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import TimerHeader from "@/components/TimerHeader/TimerHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,16 +17,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full w-full bg-[#FFE3E1]">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className={inter.className}>
-        <div className="flex p-4 gap-8">
-          <nav>
+        <header className="font-press text-sm text-[#FF9494] flex justify-between p-4">
+          <nav className="flex gap-8">
             <Link href="/">Home</Link>
-            <Link href="/ff">FFXIV</Link>
-            <Link href="/ff/weather">Weather</Link>
+            <Link href="/ff">XIV</Link>
           </nav>
-        </div>
-        {children}
+          <TimerHeader />
+        </header>
+        <main>{children}</main>
+        <footer className="h-8 absolute bottom-0 bg-[#FF9494] flex justify-center items-center w-full"></footer>
       </body>
     </html>
   );
