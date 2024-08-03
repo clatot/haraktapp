@@ -25,14 +25,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <header className="font-press text-sm text-[#FF9494] flex justify-between p-4">
-          <nav className="flex gap-8">
-            <Link href="/">Home</Link>
-            <Link href="/ff">XIV</Link>
-          </nav>
-          <TimerHeader />
-        </header>
-        <main>{children}</main>
+        {children}
         <footer className="h-8 absolute bottom-0 bg-[#FF9494] flex justify-center items-center w-full"></footer>
       </body>
     </html>
