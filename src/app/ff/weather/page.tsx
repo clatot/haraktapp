@@ -1,7 +1,11 @@
-export default function WeatherFFPage() {
+import WeatherList from "@/components/TimerHeader/WeatherList";
+
+export default function WeatherPage() {
+  // Render
   return (
-    <div className="mt-16 m-auto max-w-[1200px]">
-      <h1>Weather</h1>
+    <div>
+      FFXIV Weather Forecast
+      <WeatherList />
     </div>
   );
 }
