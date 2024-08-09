@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 export default function TimerHeader() {
   const [time, setTime] = useState({ hoursTime: 0, minutesTime: 0 });
-  console.log(time);
 
   useEffect(() => {
     const updateEpoch = () => {
