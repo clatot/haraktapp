@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Link from "next/link";
-import TimerHeader from "@/components/TimerHeader/TimerHeader";
-
-const inter = Inter({ subsets: ["latin"] });
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Harakt's App",
@@ -17,17 +12,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full w-full bg-[#FFE3E1]">
+    <html>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className={inter.className}>
-        {children}
-        <footer className="h-8 absolute bottom-0 bg-[#FF9494] flex justify-center items-center w-full"></footer>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
